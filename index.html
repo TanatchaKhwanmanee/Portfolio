@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>My Pink Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{margin:0;background:#fff7fa;color:#59434d;font-family:'Kanit',sans-serif}
+nav{position:sticky;top:0;background:white;padding:16px;text-align:center;box-shadow:0 3px 12px #f3dce5;z-index:5}
+nav a{color:#bd6686;text-decoration:none;margin:0 9px;font-size:14px}
+.hero{background:linear-gradient(135deg,#f9d9e5,#d77f9f);color:white;text-align:center;padding:75px 20px}
+.photo{width:155px;height:155px;border-radius:50%;border:5px solid white;object-fit:cover;background:#fff0f5}
+.hero h1{font-size:32px;margin-bottom:5px}
+.btn{display:inline-block;background:white;color:#c56b8c;padding:11px 25px;border-radius:30px;text-decoration:none;margin-top:20px}
+section{max-width:900px;margin:55px auto;padding:0 20px}
+.heading{text-align:center;color:#cc7392;margin-bottom:25px}
+.card{background:white;padding:28px;border-radius:20px;box-shadow:0 5px 20px #f2dce5;margin-bottom:18px}
+.center{text-align:center;line-height:2}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.item{background:white;padding:22px;border-radius:18px;box-shadow:0 4px 15px #f2dce5}
+.item h3{color:#c56b8c}
+.tag{display:inline-block;background:#ffe6ef;color:#b75d7e;padding:10px 17px;border-radius:25px;margin:5px}
+footer{background:#ca7895;color:white;text-align:center;padding:25px}
+@media(max-width:600px){.grid{grid-template-columns:1fr}.hero h1{font-size:25px}nav a{font-size:12px;margin:0 4px}}
+</style>
+</head>
+<body>
+
+<nav>
+<a href="#about">ABOUT</a>
+<a href="#education">EDUCATION</a>
+<a href="#activities">ACTIVITIES</a>
+<a href="#contact">CONTACT</a>
+</nav>
+
+<header class="hero">
+<img class="photo" src="profile.jpg" alt="My Profile">
+<h1>Tanatcha Khwanmanee</h1>
+<p>MY PORTFOLIO | M.6/1</p>
+<p>แฟ้มสะสมผลงานเพื่อการศึกษาต่อ</p>
+<a class="btn" href="#about">EXPLORE MORE ♡</a>
+</header>
+
+<section id="about">
+<div class="heading"><h2>ABOUT ME</h2><p>ประวัติส่วนตัว</p></div>
+<div class="card center">
+<h2>สวัสดีค่ะ ♡</h2>
+<p>ยินดีต้อนรับเข้าสู่เว็บไซต์ Portfolio ของฉัน</p>
+<p>เว็บไซต์นี้รวบรวมประวัติส่วนตัว การศึกษา กิจกรรม และผลงานต่าง ๆ ของฉัน</p>
+</div>
+</section>
+
+<section id="education">
+<div class="heading"><h2>EDUCATION</h2><p>ประวัติการศึกษา</p></div>
+<div class="card">
+<h3>ระดับประถมศึกษา</h3><p>ชื่อโรงเรียน</p>
+<hr>
+<h3>ระดับมัธยมศึกษาตอนต้น</h3><p>ชื่อโรงเรียน</p>
+<hr>
+<h3>ระดับมัธยมศึกษาตอนปลาย</h3><p>ชื่อโรงเรียนปัจจุบัน</p>
+</div>
+</section>
+
+<section id="activities">
+<div class="heading"><h2>ACTIVITIES & AWARDS</h2><p>กิจกรรมและผลงาน</p></div>
+<div class="grid">
+<div class="item"><h3>🌱 กิจกรรมปลูกป่า</h3><p>ร่วมอนุรักษ์ธรรมชาติและสิ่งแวดล้อม</p></div>
+<div class="item"><h3>🎤 ฝ่ายสันทนาการ</h3><p>ร่วมสร้างความสนุกสนานภายในโรงเรียน</p></div>
+<div class="item"><h3>🏫 สภานักเรียน</h3><p>เข้าร่วมกิจกรรมพัฒนาโรงเรียน</p></div>
+<div class="item"><h3>🤝 จิตอาสา</h3><p>ทำกิจกรรมเพื่อสังคม</p></div>
+</div>
+</section>
+
+<section id="skills">
+<div class="heading"><h2>MY SKILLS</h2><p>ความสามารถ</p></div>
+<div class="card center">
+<span class="tag">Teamwork</span>
+<span class="tag">Communication</span>
+<span class="tag">Creativity</span>
+<span class="tag">Leadership</span>
+</div>
+</section>
+
+<section id="dream">
+<div class="heading"><h2>MY DREAM</h2><p>ความฝันและเป้าหมาย</p></div>
+<div class="card center">
+<h2>My Future ♡</h2>
+<p>มุ่งมั่นพัฒนาตนเอง เรียนรู้สิ่งใหม่ ๆ และก้าวไปสู่เป้าหมายในอนาคต</p>
+</div>
+</section>
+
+<section id="contact">
+<div class="heading"><h2>CONTACT</h2><p>ช่องทางติดต่อ</p></div>
+<div class="card center">
+<p>ขอบคุณที่เข้ามาเยี่ยมชม Portfolio ของฉัน</p>
+<p>Tanatcha Khwanmanee | M.6/1</p>
+</div>
+</section>
+
+<footer>
+<p>© 2026 TANATCHA PORTFOLIO</p>
+<p>Made with ♡</p>
+</footer>
+
+</body>
+</html>
