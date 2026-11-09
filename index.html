@@ -1,1 +1,174 @@
+html = r'''<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fff1f6">
+  <title>Portfolio | Tanatcha Khwanmanee</title>
+  <meta name="description" content="แฟ้มสะสมผลงาน Tanatcha Khwanmanee นักเรียนชั้นมัธยมศึกษาปีที่ 6/1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--pink:#d96f99;--deep:#8f3f62;--soft:#fff1f6;--pale:#fff9fb;--ink:#493541;--muted:#806b76;--line:#f1d5e0;--white:#fff}
+    *{box-sizing:border-box;scroll-behavior:smooth}
+    body{margin:0;background:var(--pale);color:var(--ink);font-family:'Prompt',sans-serif;line-height:1.75}
+    a{color:inherit;text-decoration:none}
+    .nav{position:sticky;top:0;z-index:20;background:#ffffffeb;backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+    .nav-inner{max-width:1100px;margin:auto;padding:12px 22px;display:flex;justify-content:space-between;align-items:center;gap:16px}
+    .brand{font-family:'Kanit';font-weight:600;color:var(--deep);letter-spacing:.4px}
+    .links{display:flex;gap:18px;flex-wrap:wrap;font-size:.9rem;color:var(--muted)}
+    .links a:hover{color:var(--pink)}
+    .hero{background:radial-gradient(circle at 10% 20%,#ffe0eb 0,transparent 32%),linear-gradient(135deg,#fff1f6,#fffafd 60%,#fce4ee);padding:82px 22px 72px;overflow:hidden}
+    .hero-inner{max-width:1050px;margin:auto;display:grid;grid-template-columns:1.3fr .7fr;align-items:center;gap:42px}
+    .eyebrow{display:inline-block;background:#fff;border:1px solid var(--line);color:var(--deep);border-radius:30px;padding:5px 14px;font-size:.85rem}
+    h1{font-family:'Kanit';font-size:clamp(2.4rem,6vw,4.5rem);line-height:1.15;margin:18px 0 10px;color:var(--deep)}
+    .hero p{color:var(--muted);max-width:620px;margin:12px 0 24px}
+    .btn{display:inline-block;background:var(--pink);color:white;padding:10px 22px;border-radius:30px;font-weight:500;box-shadow:0 8px 20px #d96f9933}
+    .btn.secondary{background:white;color:var(--deep);border:1px solid var(--line);box-shadow:none;margin-left:8px}
+    .profile-wrap{justify-self:center;width:min(270px,75vw);aspect-ratio:1;border-radius:50%;padding:10px;background:#fff;border:1px solid var(--line);box-shadow:0 18px 50px #b95c8126;position:relative}
+    .profile-wrap:after{content:"✿";position:absolute;right:-12px;bottom:15px;background:#fff;border-radius:50%;width:54px;height:54px;display:grid;place-items:center;color:var(--pink);font-size:2rem;box-shadow:0 5px 18px #b95c8122}
+    .profile{width:100%;height:100%;border-radius:50%;object-fit:cover;background:#fbe2ec}
+    .placeholder{height:100%;display:grid;place-items:center;text-align:center;color:var(--pink);font-family:'Kanit';font-size:1rem;padding:20px}
+    section{padding:72px 22px;scroll-margin-top:75px}
+    .container{max-width:1000px;margin:auto}
+    .section-head{text-align:center;margin-bottom:34px}
+    .kicker{font-size:.8rem;letter-spacing:2px;color:var(--pink);font-weight:600}
+    h2{font-family:'Kanit';font-size:2rem;color:var(--deep);margin:2px 0}
+    .sub{color:var(--muted);margin:0}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:24px;box-shadow:0 10px 28px #a94d7010}
+    .card h3{font-family:'Kanit';color:var(--deep);margin:0 0 8px;font-size:1.2rem}
+    .info{display:grid;grid-template-columns:125px 1fr;gap:8px 12px;margin:0}
+    .info dt{color:var(--muted)}.info dd{margin:0;font-weight:500}
+    .edu{display:flex;gap:18px;align-items:flex-start}
+    .edu-icon{flex:0 0 54px;height:54px;border-radius:17px;background:var(--soft);display:grid;place-items:center;font-size:1.6rem}
+    .edu h3{margin:0;color:var(--deep);font-family:'Kanit'}
+    .edu p{margin:4px 0;color:var(--muted)}
+    .activity-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+    .activity{position:relative;overflow:hidden}
+    .activity .symbol{font-size:2rem;background:var(--soft);width:58px;height:58px;border-radius:18px;display:grid;place-items:center;margin-bottom:14px}
+    .activity p{color:var(--muted);margin:5px 0 0}
+    .tag{display:inline-block;margin-top:12px;border-radius:20px;background:var(--soft);color:var(--deep);padding:3px 11px;font-size:.78rem}
+    .skill-list{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+    .skill{background:white;border:1px solid var(--line);border-radius:30px;padding:8px 16px;color:var(--deep)}
+    .dream{background:linear-gradient(135deg,#fff0f5,#fff);text-align:center;border:1px solid var(--line);border-radius:26px;padding:32px}
+    .dream p{max-width:700px;margin:8px auto;color:var(--muted)}
+    .contact-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+    .contact-item{background:white;border:1px solid var(--line);border-radius:18px;padding:16px;text-align:center}
+    .contact-item strong{display:block;color:var(--deep)}
+    footer{text-align:center;padding:25px 15px;color:var(--muted);background:#fff;border-top:1px solid var(--line);font-size:.9rem}
+    .note{font-size:.82rem;color:var(--muted);text-align:center;margin-top:18px}
+    @media(max-width:720px){.hero-inner{grid-template-columns:1fr;text-align:center}.hero p{margin-left:auto;margin-right:auto}.profile-wrap{grid-row:1;width:205px}.links{gap:10px;font-size:.78rem}.nav-inner{align-items:flex-start;flex-direction:column}.about-grid,.activity-grid,.contact-grid{grid-template-columns:1fr}.info{grid-template-columns:110px 1fr}section{padding:55px 17px}.hero{padding:55px 18px}}
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="#home">TANATCHA ✿ PORTFOLIO</a>
+      <div class="links">
+        <a href="#about">About</a><a href="#education">Education</a><a href="#activities">Activities</a><a href="#skills">Skills</a><a href="#dream">Goal</a><a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
 
+  <header class="hero" id="home">
+    <div class="hero-inner">
+      <div>
+        <span class="eyebrow">แฟ้มสะสมผลงาน · PORTFOLIO</span>
+        <h1>Tanatcha<br>Khwanmanee</h1>
+        <p>นักเรียนชั้นมัธยมศึกษาปีที่ 6/1 ผู้มุ่งมั่นเรียนรู้ พัฒนาตนเอง และเก็บเกี่ยวประสบการณ์จากกิจกรรมทั้งในโรงเรียนและชุมชน</p>
+        <a class="btn" href="#about">รู้จักฉัน</a>
+        <a class="btn secondary" href="#activities">ดูผลงาน</a>
+      </div>
+      <div class="profile-wrap">
+        <img class="profile" src="F0E6BFFB-32D9-465A-8B50-76F38660DE07.png" alt="รูปโปรไฟล์ Tanatcha Khwanmanee" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
+        <div class="placeholder" style="display:none">ใส่รูปโปรไฟล์<br>profile</div>
+      </div>
+    </div>
+  </header>
+
+  <section id="about">
+    <div class="container">
+      <div class="section-head"><div class="kicker">ABOUT ME</div><h2>ประวัติส่วนตัว</h2><p class="sub">ทำความรู้จักกับฉัน</p></div>
+      <div class="about-grid">
+        <article class="card">
+          <h3>สวัสดีค่ะ ยินดีที่ได้รู้จัก</h3>
+          <p>ฉันชื่อ ธนัชชา ขวัญมณี เป็นนักเรียนที่ให้ความสำคัญกับการเรียนรู้ การทำงานร่วมกับผู้อื่น และการเข้าร่วมกิจกรรมต่าง ๆ เพราะเชื่อว่าทุกประสบการณ์เป็นโอกาสในการพัฒนาตนเอง</p>
+        </article>
+        <article class="card">
+          <h3>ข้อมูลเบื้องต้น</h3>
+          <dl class="info">
+            <dt>ชื่อ–นามสกุล</dt><dd>Tanatcha Khwanmanee</dd>
+            <dt>ระดับชั้น</dt><dd>มัธยมศึกษาปีที่ 6/1</dd>
+            <dt>เลขที่</dt><dd>8</dd>
+            <dt>สถานศึกษา</dt><dd>โรงเรียนทุ่งใหญ่เฉลิมราชอนุสรณ์รัชมังคลาภิเษก</dd>
+          </dl>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="education" style="background:#fff7fa">
+    <div class="container">
+      <div class="section-head"><div class="kicker">EDUCATION</div><h2>ประวัติการศึกษา</h2><p class="sub">เส้นทางการเรียนรู้ของฉัน</p></div>
+      <article class="card edu">
+        <div class="edu-icon">🎓</div>
+        <div><h3>โรงเรียนทุ่งใหญ่เฉลิมราชอนุสรณ์รัชมังคลาภิเษก</h3><p>ระดับมัธยมศึกษาตอนปลาย · ชั้นมัธยมศึกษาปีที่ 6/1</p><p>จังหวัดนครศรีธรรมราช</p></div>
+      </article>
+    </div>
+  </section>
+
+  <section id="activities">
+    <div class="container">
+      <div class="section-head"><div class="kicker">ACTIVITIES & EXPERIENCES</div><h2>กิจกรรมและประสบการณ์</h2><p class="sub">เรียนรู้ ลงมือทำ และเติบโตจากประสบการณ์</p></div>
+      <div class="activity-grid">
+        <article class="card activity"><div class="symbol">🌱</div><h3>กิจกรรมปลูกป่า</h3><p>เข้าร่วมกิจกรรมปลูกป่าเพื่อส่งเสริมการอนุรักษ์ทรัพยากรธรรมชาติ และสร้างจิตสำนึกในการดูแลสิ่งแวดล้อม</p><span class="tag">สิ่งแวดล้อม · จิตสาธารณะ</span></article>
+        <article class="card activity"><div class="symbol">🎤</div><h3>ฝ่ายสันทนาการ</h3><p>มีส่วนร่วมในการจัดกิจกรรมนันทนาการ สร้างบรรยากาศที่สนุกสนาน และส่งเสริมการทำงานร่วมกัน</p><span class="tag">ภาวะผู้นำ · การสื่อสาร</span></article>
+        <article class="card activity"><div class="symbol">🏫</div><h3>ค่ายยุวประชาธิปไตยและสภานักเรียน</h3><p>เรียนรู้การมีส่วนร่วมตามวิถีประชาธิปไตย การรับฟังความคิดเห็น และการทำงานเพื่อส่วนรวม</p><span class="tag">ประชาธิปไตย · การทำงานเป็นทีม</span></article>
+        <article class="card activity"><div class="symbol">🤝</div><h3>กิจกรรมจิตอาสาและพัฒนาชุมชน</h3><p>เข้าร่วมกิจกรรมเก็บขยะและปลูกป่าชายเลน เพื่อร่วมดูแลชุมชนและสิ่งแวดล้อม</p><span class="tag">จิตอาสา · ความรับผิดชอบ</span></article>
+        <article class="card activity"><div class="symbol">🪷</div><h3>กิจกรรมประกาศตนเป็นพุทธมามกะ</h3><p>เข้าร่วมกิจกรรมส่งเสริมคุณธรรม จริยธรรม และการนำหลักธรรมไปปรับใช้ในชีวิตประจำวัน</p><span class="tag">คุณธรรม · วินัย</span></article>
+        <article class="card activity"><div class="symbol">🎈</div><h3>กิจกรรมต้อนรับและนันทนาการในโรงเรียน</h3><p>มีส่วนร่วมในกิจกรรมต้อนรับและกิจกรรมสร้างความสัมพันธ์ภายในโรงเรียน ฝึกการประสานงานและการทำงานร่วมกับผู้อื่น</p><span class="tag">มนุษยสัมพันธ์ · ความร่วมมือ</span></article>
+      </div>
+      <p class="note">หมายเหตุ: ควรตรวจสอบให้ตรงกับกิจกรรมที่เข้าร่วมจริง และแนบเกียรติบัตรหรือหลักฐานประกอบในฉบับยื่นสมัคร</p>
+    </div>
+  </section>
+
+  <section id="skills" style="background:#fff7fa">
+    <div class="container">
+      <div class="section-head"><div class="kicker">MY SKILLS</div><h2>ทักษะและความสามารถ</h2><p class="sub">ทักษะที่ได้พัฒนาจากการเรียนและกิจกรรม</p></div>
+      <div class="skill-list">
+        <span class="skill">การทำงานเป็นทีม</span><span class="skill">การสื่อสาร</span><span class="skill">ความรับผิดชอบ</span><span class="skill">การประสานงาน</span><span class="skill">จิตสาธารณะ</span><span class="skill">การเรียนรู้สิ่งใหม่</span>
+      </div>
+      <p class="note">เลือกเก็บเฉพาะทักษะที่สามารถยกตัวอย่างหรืออธิบายประสบการณ์จริงได้</p>
+    </div>
+  </section>
+
+  <section id="dream">
+    <div class="container">
+      <div class="section-head"><div class="kicker">MY GOAL</div><h2>เป้าหมายในอนาคต</h2></div>
+      <div class="dream">
+        <div style="font-size:2rem">🌷</div>
+        <h3 style="font-family:Kanit;color:var(--deep);margin:5px 0">เติบโตและพัฒนาตนเองอย่างต่อเนื่อง</h3>
+        <p>ฉันตั้งใจศึกษาต่อในระดับที่สูงขึ้น พัฒนาความรู้และทักษะของตนเอง พร้อมนำประสบการณ์ที่ได้รับไปใช้ให้เกิดประโยชน์ต่อตนเอง สังคม และส่วนรวม</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" style="background:#fff7fa">
+    <div class="container">
+      <div class="section-head"><div class="kicker">CONTACT</div><h2>ติดต่อ</h2><p class="sub">ช่องทางสำหรับติดต่อสอบถาม</p></div>
+      <div class="contact-grid">
+        <div class="contact-item"><strong>ชื่อ</strong>Tanatcha Khwanmanee</div>
+        <div class="contact-item"><strong>สถานศึกษา</strong>โรงเรียนทุ่งใหญ่เฉลิมราชอนุสรณ์รัชมังคลาภิเษก</div>
+      </div>
+      <p class="note">เพิ่มอีเมลหรือช่องทางติดต่อที่ต้องการเผยแพร่ก่อนนำเว็บไซต์ไปใช้สมัคร</p>
+    </div>
+  </section>
+  <footer>© 2026 Tanatcha Khwanmanee · Portfolio</footer>
+</body>
+</html>
+'''
+path = Path("/mnt/data/index.html")
+path.write_text(html, encoding="utf-8")
+print(f"สร้างไฟล์เรียบร้อย: {path} ({path.stat().st_size:,} bytes)")
